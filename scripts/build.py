@@ -180,17 +180,20 @@ def custom_events(first, last):
 def landing_page(cfg, files):
     host = cfg["base_url"].split("://", 1)[-1].rstrip("/")
     rows = []
-    for key in ("dates", "holidays", "events"):
+    for key in ("all", "dates", "holidays", "events"):
         names = cfg["calendars"][key]
         links = []
         for lang, label in (("fa", "فارسی"), ("en", "Latin")):
             fn = files[(key, lang)]
             links.append(
-                f'<a class="btn" href="webcal://{host}/{fn}">{label}</a>'
-                f'<button class="copy" type="button" data-file="{fn}">کپی لینک</button>')
+                f'<div class="row"><a class="btn" href="webcal://{host}/{fn}">{label}</a>'
+                f'<button class="copy" type="button" data-file="{fn}">'
+                f'<span lang="fa">کپی لینک</span> · Copy</button></div>')
+        cls = ' class="featured"' if key == "all" else ""
         rows.append(f"""
-    <section>
-      <h2>{html.escape(names['fa'])}<small>{html.escape(names['en'])}</small></h2>
+    <section{cls}>
+      <h2>{html.escape(names['fa'])}</h2>
+      <p class="names" dir="ltr">{html.escape(names['en'])} · {html.escape(names['de'])}</p>
       <div class="links">{''.join(links)}</div>
     </section>""")
     template = (ROOT / "scripts" / "page.html").read_text(encoding="utf-8")
@@ -211,6 +214,8 @@ def main():
         "holidays": holiday_events(first, last, official_last),
         "events": custom_events(first, last),
     }
+    parts["all"] = tuple(
+        parts["dates"][i] + parts["holidays"][i] + parts["events"][i] for i in (0, 1))
     files = {}
     for key, (ev_fa, ev_en) in parts.items():
         for lang, evs in (("fa", ev_fa), ("en", ev_en)):

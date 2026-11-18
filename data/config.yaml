@@ -9,12 +9,19 @@ years_forward: 5
 official_last_year: 1406
 
 calendars:
+  all:
+    fa: "تقویم کامل (همه با هم)"
+    en: "Persian Calendar – All in One"
+    de: "Persischer Kalender – alles in einem"
   dates:
     fa: "تاریخ شمسی"
     en: "Persian Calendar Dates"
+    de: "Persische Datumsangaben"
   holidays:
     fa: "تعطیلات رسمی ایران"
     en: "Iran Public Holidays"
+    de: "Gesetzliche Feiertage im Iran"
   events:
     fa: "جشن‌ها و مناسبت‌های ایرانی"
     en: "Iranian Festivals & Days"
+    de: "Iranische Feste & Gedenktage"

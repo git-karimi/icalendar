@@ -4,6 +4,7 @@
 
 | تقویم | فارسی | لاتین |
 |---|---|---|
+| تقویم کامل (همه با هم) | `all-fa.ics` | `all-en.ics` |
 | تاریخ شمسی هر روز | `dates-fa.ics` | `dates-en.ics` |
 | تعطیلات رسمی ایران | `holidays-fa.ics` | `holidays-en.ics` |
 | جشن‌ها و مناسبت‌های ایرانی | `events-fa.ics` | `events-en.ics` |
