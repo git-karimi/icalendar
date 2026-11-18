@@ -186,8 +186,8 @@ def landing_page(cfg, files):
         for lang, label in (("fa", "فارسی"), ("en", "Latin")):
             fn = files[(key, lang)]
             links.append(
-                f'<div class="row"><a class="btn" href="webcal://{host}/{fn}">{label}</a>'
-                f'<button class="copy" type="button" data-file="{fn}">'
+                f'<div class="row"><a class="btn" href="webcal://{host}/{fn}" data-goatcounter-click="subscribe-{key}-{lang}">{label}</a>'
+                f'<button class="copy" type="button" data-file="{fn}" data-goatcounter-click="copy-{key}-{lang}">'
                 f'<span lang="fa">کپی لینک</span> · Copy</button></div>')
         cls = ' class="featured"' if key == "all" else ""
         rows.append(f"""
@@ -197,7 +197,16 @@ def landing_page(cfg, files):
       <div class="links">{''.join(links)}</div>
     </section>""")
     template = (ROOT / "scripts" / "page.html").read_text(encoding="utf-8")
-    return template.replace("{{SECTIONS}}", "".join(rows))
+    code = (cfg.get("goatcounter") or "").strip()
+    analytics = privacy = ""
+    if code:
+        analytics = (f'<script data-goatcounter="https://{code}.goatcounter.com/count" '
+                     'async src="//gc.zgo.at/count.js"></script>')
+        privacy = ('<p>آمار بازدید به‌صورت ناشناس و بدون کوکی با GoatCounter جمع می‌شود.</p>'
+                   '<p dir="ltr">Anonymous, cookie-free visit statistics via GoatCounter.</p>'
+                   '<p dir="ltr" lang="de">Anonyme Besuchsstatistik ohne Cookies über GoatCounter.</p>')
+    return (template.replace("{{SECTIONS}}", "".join(rows))
+            .replace("{{ANALYTICS}}", analytics).replace("{{PRIVACY}}", privacy))
 
 
 def main():

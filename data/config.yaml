@@ -1,6 +1,9 @@
 # آدرس نهایی سایت (بعد از تنظیم دامنه عوض شود)
 base_url: "https://icalendar.book-hub.org"
 
+# آمار بدون کوکی GoatCounter (خالی = خاموش)
+goatcounter: "icalendar-bookhub"
+
 # پنجرهٔ زمانی نسبت به سال جاری شمسی
 years_back: 1
 years_forward: 5
