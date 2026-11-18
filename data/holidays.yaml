@@ -1,0 +1,34 @@
+# تعطیلات رسمی ایران
+# solar: تاریخ شمسی (ماه/روز) — lunar: تاریخ قمری (ماه/روز)
+# day: end  یعنی آخرین روز ماه (۲۹ یا ۳۰)
+
+solar:
+  - {month: 1, day: 1, fa: "نوروز", en: "Nowruz"}
+  - {month: 1, day: 2, fa: "نوروز", en: "Nowruz"}
+  - {month: 1, day: 3, fa: "نوروز", en: "Nowruz"}
+  - {month: 1, day: 4, fa: "نوروز", en: "Nowruz"}
+  - {month: 1, day: 12, fa: "روز جمهوری اسلامی", en: "Islamic Republic Day"}
+  - {month: 1, day: 13, fa: "سیزده‌بدر", en: "Sizdah Bedar"}
+  - {month: 3, day: 14, fa: "رحلت امام خمینی", en: "Death of Khomeini"}
+  - {month: 3, day: 15, fa: "قیام ۱۵ خرداد", en: "15 Khordad Uprising"}
+  - {month: 11, day: 22, fa: "پیروزی انقلاب ۱۳۵۷", en: "1979 Revolution Day"}
+  - {month: 12, day: 29, fa: "ملی‌شدن صنعت نفت", en: "Oil Nationalization Day"}
+
+lunar:
+  - {month: 1, day: 9, fa: "تاسوعا", en: "Tasua"}
+  - {month: 1, day: 10, fa: "عاشورا", en: "Ashura"}
+  - {month: 2, day: 20, fa: "اربعین", en: "Arbaeen"}
+  - {month: 2, day: 28, fa: "رحلت پیامبر و شهادت امام حسن", en: "Death of the Prophet & Imam Hasan"}
+  - {month: 2, day: end, fa: "شهادت امام رضا", en: "Martyrdom of Imam Reza"}
+  - {month: 3, day: 8, fa: "شهادت امام حسن عسکری", en: "Martyrdom of Imam Hasan Askari"}
+  - {month: 3, day: 17, fa: "ولادت پیامبر و امام صادق", en: "Birth of the Prophet & Imam Sadiq"}
+  - {month: 6, day: 3, fa: "شهادت حضرت فاطمه", en: "Martyrdom of Fatimah"}
+  - {month: 7, day: 13, fa: "ولادت امام علی", en: "Birth of Imam Ali"}
+  - {month: 7, day: 27, fa: "مبعث", en: "Mab'ath"}
+  - {month: 8, day: 15, fa: "نیمهٔ شعبان", en: "Mid-Sha'ban"}
+  - {month: 9, day: 21, fa: "شهادت امام علی", en: "Martyrdom of Imam Ali"}
+  - {month: 10, day: 1, fa: "عید فطر", en: "Eid al-Fitr"}
+  - {month: 10, day: 2, fa: "عید فطر", en: "Eid al-Fitr"}
+  - {month: 10, day: 25, fa: "شهادت امام صادق", en: "Martyrdom of Imam Sadiq"}
+  - {month: 12, day: 10, fa: "عید قربان", en: "Eid al-Adha"}
+  - {month: 12, day: 18, fa: "عید غدیر", en: "Eid al-Ghadir"}

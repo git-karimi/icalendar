@@ -1,0 +1,20 @@
+# آدرس نهایی سایت (بعد از تنظیم دامنه عوض شود)
+base_url: "https://icalendar.book-hub.org"
+
+# پنجرهٔ زمانی نسبت به سال جاری شمسی
+years_back: 1
+years_forward: 5
+
+# آخرین سال شمسی که تقویم رسمی‌اش منتشر شده؛ تعطیلات قمری بعد از آن «تقریبی» است
+official_last_year: 1406
+
+calendars:
+  dates:
+    fa: "تاریخ شمسی"
+    en: "Persian Calendar Dates"
+  holidays:
+    fa: "تعطیلات رسمی ایران"
+    en: "Iran Public Holidays"
+  events:
+    fa: "جشن‌ها و مناسبت‌های ایرانی"
+    en: "Iranian Festivals & Days"

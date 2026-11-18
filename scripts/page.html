@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تقویم شمسی برای آیفون | Persian Calendar for iPhone</title>
+<meta name="description" content="تقویم شمسی، تعطیلات رسمی و جشن‌های ایرانی برای تقویم آیفون، مک و گوگل">
+<style>
+  :root { --bg:#f6f3ee; --card:#fff; --ink:#1d1b18; --muted:#6b655c; --accent:#0f6e5c; --line:#e6e0d6; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#151412; --card:#1f1d1a; --ink:#f1ede6; --muted:#a39c90; --accent:#4fc2a8; --line:#34302a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font: 16px/1.7 -apple-system, "Vazirmatn", "Segoe UI", Tahoma, sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 18px 48px; }
+  header h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  header p { margin: 0; color: var(--muted); }
+  .en { direction: ltr; text-align: left; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+            padding: 16px 18px; margin-top: 16px; }
+  h2 { font-size: 1.1rem; margin: 0 0 12px; display:flex; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+  h2 small { font-weight: 400; color: var(--muted); direction:ltr; }
+  .links { display:flex; gap:10px; flex-wrap:wrap; }
+  .btn { flex:1 1 120px; text-align:center; text-decoration:none; background:var(--accent); color:#fff;
+         padding: 11px 14px; border-radius: 10px; font-weight: 600; }
+  .copy { flex:0 0 auto; background:transparent; color:var(--accent); border:1px solid var(--accent);
+          padding: 10px 12px; border-radius:10px; font: inherit; cursor:pointer; }
+  .help { margin-top: 28px; color: var(--muted); font-size: .95rem; }
+  .help h3 { color: var(--ink); font-size: 1rem; margin: 18px 0 4px; }
+  .help ol { margin: 0; padding-inline-start: 20px; }
+  footer { margin-top: 32px; font-size: .85rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>تقویم شمسی برای آیفون</h1>
+    <p>روی دکمهٔ هر تقویم بزن و «Subscribe» را تأیید کن. هر کدام را خواستی جدا اضافه کن.</p>
+    <p class="en">Persian (Solar Hijri) calendar for iPhone. Tap a button, then confirm “Subscribe”.</p>
+  </header>
+{{SECTIONS}}
+  <div class="help">
+    <h3>آیفون / آیپد / مک</h3>
+    <ol>
+      <li>روی دکمهٔ «فارسی» یا «Latin» بزن.</li>
+      <li>در پنجرهٔ باز شده Subscribe و بعد Add را بزن.</li>
+      <li>برای حذف: Calendars پایین صفحه → علامت i کنار تقویم → Delete Calendar.</li>
+    </ol>
+    <h3>گوگل کلندر / اندروید</h3>
+    <ol>
+      <li>دکمهٔ «کپی لینک» را بزن.</li>
+      <li>در calendar.google.com از بخش Other calendars گزینهٔ From URL را انتخاب کن و لینک را بچسبان.</li>
+    </ol>
+    <h3 class="en">Google Calendar / Android</h3>
+    <p class="en">Copy the link, then in Google Calendar on the web choose Other calendars → From URL.</p>
+  </div>
+  <footer>
+    تعطیلات قمری سال‌هایی که تقویم رسمی‌شان منتشر نشده «تقریبی» علامت خورده‌اند.
+    <span class="en" style="display:block">Lunar holidays for years without a published official calendar are marked “approx.”</span>
+  </footer>
+</main>
+<script>
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var url = location.origin + '/' + b.dataset.file;
+    var done = function () { var t = b.textContent; b.textContent = '✓'; setTimeout(function () { b.textContent = t; }, 1500); };
+    if (navigator.clipboard) { navigator.clipboard.writeText(url).then(done, function () { prompt('', url); }); }
+    else { prompt('', url); }
+  });
+});
+</script>
+</body>
+</html>

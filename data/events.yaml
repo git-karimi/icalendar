@@ -1,0 +1,52 @@
+# مناسبت‌های تقویم (این فایل را ادمین ویرایش می‌کند)
+#
+# هر مناسبت:
+#   month: ماه شمسی (۱ = فروردین ... ۱۲ = اسفند)
+#   day:   روز
+#   fa:    عنوان فارسی
+#   en:    عنوان لاتین
+#   note:  (اختیاری) توضیح کوتاه، هر دو زبان
+#
+# مناسبت ویژه: rule: chaharshanbe-suri  (شب آخرین چهارشنبهٔ سال، خودکار محاسبه می‌شود)
+# برای اضافه کردن، یک خط مثل بقیه بنویس و فایل را ذخیره (Commit) کن.
+
+# --- جشن‌های باستانی ---
+- {month: 1, day: 1, fa: "نوروز", en: "Nowruz"}
+- {month: 1, day: 13, fa: "سیزده‌بدر", en: "Sizdah Bedar"}
+- {month: 1, day: 19, fa: "جشن فروردینگان", en: "Farvardinegan"}
+- {month: 2, day: 3, fa: "جشن اردیبهشتگان", en: "Ordibeheshtegan"}
+- {month: 3, day: 6, fa: "جشن خردادگان", en: "Khordadegan"}
+- {month: 4, day: 13, fa: "جشن تیرگان", en: "Tirgan"}
+- {month: 5, day: 7, fa: "جشن امردادگان", en: "Amordadegan"}
+- {month: 6, day: 4, fa: "جشن شهریورگان", en: "Shahrivaregan"}
+- {month: 7, day: 16, fa: "جشن مهرگان", en: "Mehregan"}
+- {month: 8, day: 10, fa: "جشن آبانگان", en: "Abanegan"}
+- {month: 9, day: 9, fa: "جشن آذرگان", en: "Azargan"}
+- {month: 9, day: 30, fa: "شب یلدا", en: "Yalda Night"}
+- {month: 10, day: 1, fa: "خرّم‌روز (دیگان)", en: "Khorram-ruz (Deygan)"}
+- {month: 11, day: 2, fa: "جشن بهمنگان", en: "Bahmanegan"}
+- {month: 11, day: 10, fa: "جشن سده", en: "Sadeh"}
+- {month: 12, day: 5, fa: "جشن سپندارمذگان", en: "Sepandarmazgan"}
+- {rule: chaharshanbe-suri, fa: "شب چهارشنبه‌سوری", en: "Chaharshanbe Suri (eve)"}
+
+# --- روزهای ملی و تاریخی ---
+- {month: 8, day: 7, fa: "روز کوروش بزرگ", en: "Cyrus the Great Day"}
+- {month: 2, day: 10, fa: "روز ملی خلیج فارس", en: "Persian Gulf Day"}
+- {month: 5, day: 14, fa: "سالروز مشروطه", en: "Constitution Day (Mashrouteh)"}
+- {month: 12, day: 29, fa: "روز ملی‌شدن صنعت نفت", en: "Oil Nationalization Day"}
+
+# --- بزرگان فرهنگ ---
+- {month: 1, day: 25, fa: "روز بزرگداشت عطار", en: "Attar Day"}
+- {month: 2, day: 1, fa: "روز بزرگداشت سعدی", en: "Saadi Day"}
+- {month: 2, day: 25, fa: "روز بزرگداشت فردوسی و پاسداشت زبان فارسی", en: "Ferdowsi Day & Persian Language Day"}
+- {month: 2, day: 28, fa: "روز بزرگداشت خیام", en: "Khayyam Day"}
+- {month: 6, day: 1, fa: "روز بزرگداشت ابن‌سینا", en: "Avicenna Day"}
+- {month: 6, day: 5, fa: "روز بزرگداشت رازی", en: "Razi Day"}
+- {month: 6, day: 13, fa: "روز بزرگداشت ابوریحان بیرونی", en: "Al-Biruni Day"}
+- {month: 7, day: 8, fa: "روز بزرگداشت مولوی", en: "Rumi Day"}
+- {month: 7, day: 20, fa: "روز بزرگداشت حافظ", en: "Hafez Day"}
+
+# --- پهلوی ---
+- {month: 12, day: 24, fa: "زادروز رضاشاه", en: "Birthday of Reza Shah"}
+- {month: 8, day: 4, fa: "زادروز محمدرضا شاه", en: "Birthday of Mohammad Reza Shah"}
+- {month: 8, day: 9, fa: "زادروز رضا پهلوی", en: "Birthday of Reza Pahlavi"}
